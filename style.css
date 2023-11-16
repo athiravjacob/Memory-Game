@@ -1,0 +1,156 @@
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: monospace, cursive;
+    background: #14213d;
+}
+.container{
+    display:flex;
+    justify-content:flex-end;
+    /* border : 5px solid #28cb0c; */
+    gap:2em;
+}
+.center{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    gap:5em;
+    flex-grow: 1;
+   
+}
+
+.sideBar{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width:500px;
+    height:100vh;
+    gap:2em;
+    background:#fb8500;
+    
+}
+.sideBar button{
+    display: block;
+    margin: 15px 0;
+    width:135px;
+    font-size: 24px ;
+    color: #03071e;
+    border:1px solid #03071e;
+    background: transparent;
+}
+.sideBar button:hover{
+    background: #03071e;
+    color: white;
+    box-shadow: 0 0 5px #03071e,
+                0 0 25px #03071e;
+}
+
+.sideBar #score{
+    margin-top:150px;
+}
+.heading {
+    color:#00b4d8;
+    font-size: 64px;
+  }
+  #scoreDisplay{
+    color:#400D51;
+    font: 18px;
+  }
+  #timer{
+    color:#89fc00;
+    background-color: #000;
+    width:490px;
+    text-align: center;
+    font-size: 42px;
+  }
+h1{
+    font-size: 44px;
+    
+}
+#score{
+    
+    font-size: 54px;
+    font-weight: bold;
+    color: #48E0E4;
+}
+#grid{
+    width: 450px;
+    max-width: 2000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+
+}
+#grid img{ 
+    width:90px;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin:0 auto;
+
+}
+.blur.active{
+    filter:blur(20px);
+}
+#popup, #timeout{
+    position: fixed;
+    top:40%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    width:600px;
+    height: 500px;
+    padding:50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.30);
+    background:linear-gradient(90deg,#FF7777,#31E1F7);
+    color:#400D51;
+    visibility: hidden;
+    border:none;
+    opacity: 0;
+    transition: 0.5s ;
+   }
+   #popup.active ,#timeout.active{
+    left:50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s ;
+   
+   } 
+ button{
+    padding:10px 20px;
+    font-size: 20px;
+    font-family: monospace;
+    background: transparent;
+    color:#400D51;
+    border:1px solid #400D51;
+    position: relative;
+    border-radius: 25px;
+    transition:0.3s ;
+ }
+
+ .play-again:hover{
+    background: #400D51;
+    box-shadow: 0 0 5px #400D51,
+                0 0 25px #400D51;
+    color:#fff;
+    transition: 0.3s ;
+    z-index: -1;
+ }
+    
+
+
+@media(max-width:768px){
+    #grid{
+        width:250px;
+    }
+    #grid img{
+        width:80px;
+    }
+}

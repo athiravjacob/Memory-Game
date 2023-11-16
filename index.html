@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,400;0,900;1,300;1,400&display=swap');
+      </style>
+</head>
+<body>
+    <!-- Title and score goes in the heading section -->
+    
+        <div  class="blur container">
+            <div class="center">
+                <h1 class="heading">Memory Game</h1>
+                <div id="grid"></div>
+            </div>
+            <div class="sideBar">
+               
+                    <h3 id="score" >Score <span id="result"></span></h3> 
+                    <p id="timer">Select Mode To Start Game</p>
+                    <button id="easy" onclick="timerEasy()">Easy</button>
+                    <button id="moderate" onclick="timerModerate()">Moderate</button>
+                    <button id="hard" onclick="timerHard()">Hard </button>
+                
+            </div>
+           
+        </div>
+ 
+    
+
+    <!-- div is created to showcase cards.Cards will be added using javascript -->
+   
+    <!-- <button id="play-again" onclick="window.location.reload()";>Play Again</button> -->
+
+
+    <div id="popup" class="center">
+        <h1>Congragulation</h1>
+        <p>You Won The Game</p>
+        <button class="play-again" onclick="window.location.reload()";>Play Again </button>
+    </div>
+
+    <div id="timeout" class="center">
+        <h1>OOPS! Time Out</h1>
+        <h3 id="scoreDisplay"> </h3>
+        <button class="play-again" onclick="window.location.reload()";>Play Again </button>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
